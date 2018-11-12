@@ -53,7 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\MagicScript.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
+     <Compile Include="Assets\Staff.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Tim Nieto/Documents/Mage-Shooter-VR/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
