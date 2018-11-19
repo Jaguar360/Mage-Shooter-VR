@@ -9,7 +9,7 @@ public class MagicScript : MonoBehaviour
     private float lifeTimer;
 
     //GameManager gameManager;
-    private Enemy enemy;
+   // private Enemy enemy;
     
     // Use this for initialization
     void Start ()
@@ -31,16 +31,16 @@ public class MagicScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Enemy")
-        {
-            enemy = other.GetComponent<Enemy>();
-
-            enemy.MakeDead(true);
+    //private void OnTriggerEnter(Collider other)
+    //{
+     //   if (other.gameObject.tag == "Enemy")
+     //   {
+     //       enemy = other.GetComponent<Enemy>();
+     //
+     //       enemy.MakeDead(true);
 
             // award points to player
            // gameManager.AddScore(1000);
-        }
-    }
+      //  }
+    //}
 }

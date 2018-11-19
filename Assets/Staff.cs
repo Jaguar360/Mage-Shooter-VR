@@ -13,14 +13,18 @@ public class Staff : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+    {
+		if(Input.GetKeyDown(KeyCode.Space))
+        {
+            fireMagic();
+        }
 	}
 
     public void fireMagic()
     {
         GameObject magic = Instantiate(projectile);
-        magic.transform.position = player.transform.position + player.transform.forward;
+        magic.transform.position = player.transform.position + player.transform.forward;    
         magic.transform.forward = player.transform.forward;
     }
 }

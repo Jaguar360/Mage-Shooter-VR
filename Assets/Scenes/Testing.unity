@@ -379,6 +379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1437786261}
+  - component: {fileID: 1437786262}
   m_Layer: 0
   m_Name: Staff
   m_TagString: Untagged
@@ -399,6 +400,19 @@ Transform:
   m_Father: {fileID: 684919869}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1437786262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1437786260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d736a9a243b56764d9ee82eeadc04a18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1343937427151724, guid: 51ae645f9bc3199448472966fc02fbf6, type: 2}
+  player: {fileID: 684919868}
 --- !u!1 &2132661861
 GameObject:
   m_ObjectHideFlags: 0
