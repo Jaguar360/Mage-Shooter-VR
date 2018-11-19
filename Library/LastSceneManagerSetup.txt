@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Testing.unity
+=======
+- path: Assets/Scenes/ProjectileTest.unity
+>>>>>>> c0cc03a1fc99d6e0bec81b09cfe26fa0d9899fc0
   isLoaded: 1
   isActive: 1
