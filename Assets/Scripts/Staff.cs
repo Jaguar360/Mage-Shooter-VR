@@ -22,7 +22,7 @@ public class Staff : MonoBehaviour
             fireMagic();
         }
 
-        if (OVRInput.Get(OVRInput.RawButton.RTouchpad)) 
+        else if (OVRInput.GetDown(OVRInput.RawButton.RTouchpad)) 
         {
             fireMagic();
         }
