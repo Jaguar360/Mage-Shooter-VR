@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagicScript : MonoBehaviour
+public class Fire : MonoBehaviour
 {
-    public float speed = 0f;
+    public float speed = 10f;
     public float lifeDuration = 2f;
     private float lifeTimer;
 
@@ -31,16 +31,18 @@ public class MagicScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Enemy")
         {
-            enemy = other.GetComponent<Enemy>();
+            enemy = other.gameObject.GetComponent<Enemy>();
 
-            enemy.MakeDead(true);
+            enemy.TakeDamage(40);
 
             // award points to player
             // gameManager.AddScore(1000);
         }
+
+        Destroy(gameObject);
     }
 }
