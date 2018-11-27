@@ -4,27 +4,32 @@ using UnityEngine;
 
 public class Staff : MonoBehaviour
 {
-
-    public GameObject projectile;
+    [SerializeField]
+    private GameObject projectile;
     public GameObject player;
+    private GameObject[] projectiles;
 
     // Use this for initialization
     void Start()
     {
-
+        projectile = (GameObject)Resources.Load("Prefabs/Meteor");
+        projectiles = new GameObject[3];
+        projectiles[0] = (GameObject)Resources.Load("Prefabs/Meteor");
+        projectiles[1] = (GameObject)Resources.Load("Prefabs/Spark");
+        projectiles[2] = (GameObject)Resources.Load("Prefabs/Ice");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)) 
+        if (Input.GetKeyDown(KeyCode.F) || OVRInput.GetDown(OVRInput.RawButton.RTouchpad))  
         {
             fireMagic();
         }
 
-        else if (OVRInput.GetDown(OVRInput.RawButton.RTouchpad)) 
+        if (Input.GetKeyDown(KeyCode.Space) || OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)) 
         {
-            fireMagic();
+            Switch();
         }
     }
 
@@ -33,5 +38,23 @@ public class Staff : MonoBehaviour
         GameObject magic = Instantiate(projectile);
         magic.transform.position = player.transform.position + player.transform.forward;
         magic.transform.forward = player.transform.forward;
+    }
+
+    public void Switch() 
+    {
+        if (projectile == projectiles[0]) 
+        {
+            projectile = projectiles[1];
+        }
+
+        else if (projectile = projectiles[1]) 
+        {
+            projectile = projectiles[2];
+        }
+
+        else if (projectile = projectiles[2]) 
+        {
+            projectile = projectiles[0];
+        }
     }
 }

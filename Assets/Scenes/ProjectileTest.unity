@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05396c9bbe7e5459d8ce47bc7ac26b88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 1993080513630462, guid: 599ed34a6966a4ab589421fec570ccea, type: 2}
+  projectile: {fileID: 1526781624121620, guid: 5cf6bab10a62a4ac7a80cb9cdf67368a, type: 2}
   player: {fileID: 468657000}
 --- !u!1 &964780731
 GameObject:
@@ -369,7 +369,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1444595308}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
