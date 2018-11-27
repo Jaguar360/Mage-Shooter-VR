@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Lightning : MonoBehaviour {
 
-    public float speed = 40f;
+    public float speed = 25f;
     public float lifeDuration = 1f;
     private float lifeTimer;
 
