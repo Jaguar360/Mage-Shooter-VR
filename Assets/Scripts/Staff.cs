@@ -16,17 +16,13 @@ public class Staff : MonoBehaviour
         projectiles = new GameObject[3];
         projectiles[0] = (GameObject)Resources.Load("Prefabs/Meteor");
         projectiles[1] = (GameObject)Resources.Load("Prefabs/Spark");
+        projectiles[2] = (GameObject)Resources.Load("Prefabs/Ice");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)) 
-        {
-            fireMagic();
-        }
-
-        else if (OVRInput.GetDown(OVRInput.RawButton.RTouchpad)) 
+        if (Input.GetKeyDown(KeyCode.F) || OVRInput.GetDown(OVRInput.RawButton.RTouchpad))  
         {
             fireMagic();
         }
@@ -52,6 +48,11 @@ public class Staff : MonoBehaviour
         }
 
         else if (projectile = projectiles[1]) 
+        {
+            projectile = projectiles[2];
+        }
+
+        else if (projectile = projectiles[2]) 
         {
             projectile = projectiles[0];
         }

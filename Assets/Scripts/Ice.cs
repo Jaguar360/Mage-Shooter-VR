@@ -31,13 +31,16 @@ public class Ice : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Enemy")
         {
-            enemy = other.GetComponent<Enemy>();
+            Physics.IgnoreCollision(other.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
+            enemy = other.gameObject.GetComponent<Enemy>();
 
             enemy.TakeDamage(25);
+
+
 
             // award points to player
             // gameManager.AddScore(1000);
